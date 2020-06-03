@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Update</title>
+    <link rel="stylesheet" href="../css/form.css">
+  </head>
+  <body>
+
+    <form action="/users/updating?_method=PUT" method="post">
+      <div class="container">
+        <h1>Update profile</h1>
+        <hr>
+        <%- include("./partials/msg")  %>
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="name" id="name"  required >
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" id="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="password2" id="psw-repeat" required>
+        <hr>
+
+        <button type="submit" class="registerbtn">Update</button>
+
+      </div>
+
+
+    </form>
+
+
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+  </head>
+  <body>
+
+    <div class="navbar">
+      <a href="#" class="right">Noteworthy -The journal blog</a>
+      <a class="anchor-left" href="/users/logout">Logout</a>
+      <a class="anchor-left" href="/home/profile">Profile</a>
+      <form class="right" action="/username" method="post">
+        <input type="text" name="search"  required placeholder="username">
+        <button type="submit" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+    </div>
+
+    <div class="top-container">
+      <h1>Welcome <%= name %></h1>
+      <a id="newarticle" href="/articles/new">New Article</a>
+
+    </div>
+
+    <%articles.forEach(article =>{%>
+      <div id="container">
+        <h1><%= article.title %></h1>
+        <div class="date"><%= article.createdAt.toLocaleDateString() %></div>
+        <div class="description"><%= article.description %></div>
+
+
+          <a class="inline" id="readmore" href="/articles/<%=article.slug %>">Read more</a>
+          <a class="inline" id="edit" href="/articles/edit/<%= article.id%>">Edit</a>
+          <form class="inline"  action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+              <button type="submit" name="button">Delete</button>
+          </form>
+
+
+      </div>
+
+    <%}) %>
+
+  </body>
+</html>

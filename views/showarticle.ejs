@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article</title>
+    <link rel="stylesheet" href="../css/showarticle.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1><%=article.title%></h1>
+      <div class="select">
+        <a id="home" href="/home">Home</a>
+        <a id="edit" href="/articles/edit/<%=article.id%>">Edit</a>
+      </div>
+
+      <p id="date"><%=article.createdAt.toLocaleDateString() %></p>
+
+      <h2 ><%=article.description%></h2><br>
+
+      <div >
+        <%- article.sanitizedHtml %>
+      </div>
+
+
+    </div>
+
+  </body>
+</html>

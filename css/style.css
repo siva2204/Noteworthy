@@ -1,0 +1,156 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('../img/bg.jpg');
+  background-repeat:repeat-y;
+  background-attachment: fixed;
+  background-size: cover;
+  width:100%;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+
+}
+a{
+  text-decoration: none;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #262626;
+  font-size: 22px;
+
+}
+.navbar a {
+ display: inline-block;
+  color:white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+
+
+}
+.anchor-left {
+  float: right;
+  font-size: 19px;
+}
+.right{
+  float: left;
+  display:inline-block;
+  padding: 8px;
+}
+
+.right input{
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  color: black;
+  border:none;
+  padding: 5px;
+}
+
+
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#newarticle{
+  padding: 5px 9px;
+  text-align: center;
+  color: white;
+  background-color: #0073e6;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+#container{
+  background-color: #e6e6e6;
+  color: black;
+  padding:16px 20px;
+  width: 65%;
+  border-radius: 5px;
+  margin:25px auto ;
+
+
+}
+
+ h1{
+  margin:0px 0px 10px 0px;
+  padding:0;
+}
+
+.date{
+  color: grey;
+  padding:4px;
+}
+
+.description{
+  font-size: 18px;
+  padding-left: 4px;
+}
+
+.inline{
+  display: inline-block;
+  margin-top: 10px;
+
+}
+
+#container a{
+  text-align: center;
+  padding: 5px 8px;
+
+}
+
+#readmore{
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+#container a:hover{
+  opacity: 1;
+}
+
+#edit{
+  color: white;
+  background-color: #0073e6;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+#container button{
+  border-radius: 4px;
+  background-color: #ff1a1a;
+  color: white;
+  border:1px solid #ff1a1a;
+  padding: 5px 8px;
+  text-align: center;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.right button{
+  border-radius: 4px;
+  background-color:#262626 ;
+  color: white;
+  border:2px solid #e6e6e6;
+  padding: 1.5px 8px;
+  text-align: center;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.top-container{
+  background-color: #e6e6e6;
+  color: black;
+  padding:15px 20px;
+  width: 65%;
+  border-radius: 5px;
+  margin:25px auto ;
+
+}

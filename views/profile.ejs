@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= user.name%></title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+  </head>
+  <body>
+    <div class="container1">
+
+      <p style="text-align:center;"><img src="../img/profile.jpg" alt="profile.img"></p>
+      <p><%=user.name%></p>
+      <p><%=user.email%></p>
+      <p><a class="updateprofile" href="/users/update">Upadte profile</a><a class="updateprofile" href="/home">Home</a></P>
+        <%articles.forEach(article =>{%>
+          <div id="container">
+            <h1><%= article.title %></h1>
+            <div class="date"><%= article.createdAt.toLocaleDateString() %></div>
+            <div class="description"><%= article.description %></div>
+
+
+              <a class="inline" id="readmore" href="/articles/<%=article.slug %>">Read more</a>
+              <a class="inline" id="edit" href="/articles/edit/<%= article.id%>">Edit</a>
+              <form class="inline"  action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+                  <button type="submit" name="button">Delete</button>
+              </form>
+
+
+          </div>
+
+        <%}) %>
+
+
+
+    </div>
+
+  </body>
+</html>
